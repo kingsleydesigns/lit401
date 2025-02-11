@@ -1,0 +1,295 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    color: #333;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+    color: #111;
+    text-align: center;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header Section */
+  #intro {
+    position: relative;
+    background: #fff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #0077cc;
+    margin-bottom: 20px;
+  }
+  
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .intro-text h1 {
+    font-size: 1.5em;
+    margin: 0.5rem;
+    text-wrap: nowrap;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+   .intro-text h2 {
+    font-size: 1.2em;
+    margin: 0.5rem;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .intro-text h2:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .intro-text h2:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .intro-text h2:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  
+  /* About Section */
+  #about {
+    background: #0077cc;
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .about-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-main {
+    flex: 1 1 60%;
+  }
+  
+  .about-extra {
+    flex: 1 1 35%;
+    background: #005999;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .about-extra .role h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+  
+  .about-extra .tools ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .about-extra .tools li {
+    margin: 5px 0;
+  }
+    
+    /* Projects Section */
+    #projects {
+      padding: 60px 20px;
+      background-color: #0077cc;
+    }
+    
+    #projects h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    
+    #projects p {
+        color: white;
+        text-align: center;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .project-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-image {
+      width: 100%;
+      height: 350px;
+      display: block;
+      transition: transform 0.5s ease;
+      filter: blur(3px);
+    }
+    
+    .project-card:hover .project-image {
+      transform: scale(1.1);
+    }
+    
+    .project-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    
+    .project-card:hover .project-hover {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+    .project-hover h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: white;
+    }
+    
+    .project-hover p {
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+    
+    .project-link {
+      color: #0077cc;
+      text-decoration: none;
+      font-weight: bold;
+      background: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    
+    .project-link:hover {
+      background: #0077cc;
+      color: white;
+    }
+    
+    /* Contact Section */
+    #contact {
+      text-align: center;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    
+    #contact a {
+      color: #0077cc;
+    }
+  
+  /* Define the animation */
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Settle in place */
+    }   
+  }
+  
+
+/* Assignment section */
+.assignment {
+    background-color:rgb(252, 250, 250);
+    padding: 10px;
+}
+
+
+
+
+
+  /* Initial state of elements */
+  .section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+  }
+  
+  /* Add animation class when element is in view */
+  .section.visible {
+    animation: fadeInUp 3s ease-out forwards;
+  }
+  
+  #tools {
+    opacity: 0;
+    transform: translateY(50px); /* Start below */
+    transition: all 0.5s ease-out;
+  }
+  
+  #tools.visible {
+    opacity: 1;
+    animation: fadeInUp 2s ease-out forwards;
+  }
+
+
+
+
+
+
+
+   /* Media query for larger screen size  */
+
+  @media screen and (min-width: 818px) { 
+    .assignment {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+  }  
