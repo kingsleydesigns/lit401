@@ -43,7 +43,7 @@ body {
     width: 200px;
     height: 250px;
     border-radius: 50%;
-    border: 3px solid #0077cc;
+    border: 3px solid #0e5312;
     margin-bottom: 20px;
   }
   
@@ -56,7 +56,7 @@ body {
   .intro-text h1 {
     font-size: 1.5em;
     margin: 0.5rem;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
     opacity: 0;
     transform: translateX(-100%);
     animation: slideIn 1s ease-out forwards;
@@ -136,7 +136,7 @@ body {
     /* Projects Section */
     #projects {
       padding: 60px 20px;
-      background-color: #0077cc;
+      background-color: #0e5312;
     }
     
     #projects h2 {
@@ -186,8 +186,8 @@ body {
       justify-content: center;
       align-items: center;
       text-align: center;
-      /* opacity: 0;
-      transform: translateY(100%);
+      /* opacity: 0; */
+      /* transform: translateY(100%);
       transition: transform 0.5s ease, opacity 0.5s ease; */
     }
     
@@ -208,7 +208,7 @@ body {
     }
     
     .project-link {
-      color: #0077cc;
+      color: #0e5312;
       text-decoration: none;
       font-weight: bold;
       background: white;
@@ -218,7 +218,7 @@ body {
     }
     
     .project-link:hover {
-      background: #0077cc;
+      background: #0e5312;
       color: white;
     }
     
@@ -230,7 +230,7 @@ body {
     }
     
     #contact a {
-      color: #0077cc;
+      color: #0e5312;
     }
   
   /* Define the animation */
@@ -260,6 +260,14 @@ body {
     margin-top: 0;
     margin-bottom: 1.5rem;
 }
+
+#research {
+  margin: 0;
+}
+
+/* #linebreak {
+  margin: 0;
+} */
 
 
 
